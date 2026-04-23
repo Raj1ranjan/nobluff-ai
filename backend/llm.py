@@ -3,8 +3,8 @@ import os
 import json
 import re
 from dotenv import load_dotenv
-from prompts import EXTRACT_PROJECT_PROMPT, ANALYZE_PROJECT_PROMPT, GLOBAL_ANALYSIS_PROMPT
-from utils import normalize_question
+from backend.prompts import EXTRACT_PROJECT_PROMPT, ANALYZE_PROJECT_PROMPT, GLOBAL_ANALYSIS_PROMPT
+from backend.utils import normalize_question
 
 load_dotenv(dotenv_path=os.path.join(os.path.dirname(__file__), '..', '.env'))
 GROQ_API_KEY = os.getenv("GROQ_API_KEY")

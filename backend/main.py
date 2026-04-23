@@ -7,9 +7,9 @@ from slowapi import Limiter
 from slowapi.util import get_remote_address
 from slowapi.errors import RateLimitExceeded
 from slowapi.middleware import SlowAPIMiddleware
-from pdf_parser import extract_text_from_pdf
-from llm import extract_projects_llm, process_project, generate_global_analysis
-from database import init_db, save_resume, save_project, save_questions, get_questions_by_project, save_feedback, get_feedback, get_all_resumes, get_projects_by_resume
+from backend.pdf_parser import extract_text_from_pdf
+from backend.llm import extract_projects_llm, process_project, generate_global_analysis
+from backend.database import init_db, save_resume, save_project, save_questions, get_questions_by_project, save_feedback, get_feedback, get_all_resumes, get_projects_by_resume
 
 limiter = Limiter(key_func=get_remote_address)
 app = FastAPI()

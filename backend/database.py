@@ -1,6 +1,6 @@
 import os
 import sqlite3
-from utils import normalize_question
+from backend.utils import normalize_question
 
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 DB_PATH = os.path.join(BASE_DIR, "nobluff.db")
